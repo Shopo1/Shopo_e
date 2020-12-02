@@ -1,0 +1,10 @@
+{
+
+    "provider": "google-cloud-storage",
+
+    "providerOptions": {
+        "bucketName": "shopobuket"
+      
+    }
+
+}
