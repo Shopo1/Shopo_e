@@ -2,15 +2,13 @@ module.exports = ({ env }) => ({
   defaultConnection: 'default',
   connections: {
     default: {
-      connector: 'bookshelf',
+      connector: 'mongoose',
       settings: {
-        client: 'postgres',
-        host: `/cloudsql/${env('INSTANCE_CONNECTION_NAME')}`,
-        database: env('DATABASE_NAME'),
-        username: env('DATABASE_USERNAME'),
-        password: env('DATABASE_PASSWORD'),
+        uri: env('DATABASE_URI'),
       },
-      options: {},
+      options: {
+        ssl: true,
+      },
     },
   },
 });
