@@ -1,0 +1,19 @@
+{
+    "defaultConnection": "default",
+    "connections": {
+      "default": {
+        "connector": "bookshelf",
+        "settings": {
+          "client": "postgres",
+          "host": "${process.env.DATABASE_HOST || '139.59.65.36'}",
+          "port": "${process.env.DATABASE_PORT || 5432}",
+          "database": "${process.env.DATABASE_NAME || 'shopow'}",
+          "username": "${process.env.DATABASE_USERNAME || 'shopow'}",
+          "password": "${process.env.DATABASE_PASSWORD || '12345678'}"
+        },
+        "options": {
+          "ssl": false
+        }
+      }
+    }
+  }
